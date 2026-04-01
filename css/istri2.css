@@ -181,5 +181,59 @@ hr {
     box-shadow: 0 0 100px rgba(0, 0, 0, 1);
 }
 
+/*CV*/
+..t3 {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
 
-    
+.t3dan1 {
+    width: 50%;
+    height: auto;
+    background: wheat;
+    justify-content: center;
+    text-align: justify;
+    padding: 20px;
+    margin: auto;
+    border-radius: 40px;
+
+}
+
+.t3dan1 h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+} 
+
+.t3dan1 p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: black;
+}
+
+.t3dan1 button {
+    padding: 12px 25px;
+    border: none;
+    background-color: lightcoral;
+    color: green;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.t3dan1 button:hover{
+    background-color: black;
+}
+
+. {
+    width: 40%;
+}
+
+. {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+}    
