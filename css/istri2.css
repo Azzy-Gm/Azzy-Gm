@@ -13,6 +13,10 @@ body {
     background-color: lightgrey;
 }
 
+hr {
+    size: 6;
+}
+
 .navbar {
     background-color: grey;
     position: sticky;
