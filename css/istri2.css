@@ -225,11 +225,11 @@ hr {
     background-color: black;
 }
 
-. {
+.cv {
     width: 40%;
 }
 
-. {
+.cv img {
     width: 100%;
     height: auto;
     max-height: 80vh;
