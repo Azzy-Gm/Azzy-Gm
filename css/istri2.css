@@ -182,7 +182,7 @@ hr {
 }
 
 /*CV*/
-..t3 {
+.t3 {
    min-height: 100vh;
    display: flex;
    align-items: center;
@@ -221,7 +221,7 @@ hr {
     cursor: pointer;
 }
 
-.t3dan1 button:hover{
+.t3dan1 button:hover {
     background-color: black;
 }
 
