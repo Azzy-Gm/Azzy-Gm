@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Percobaan</title>
+    <!-- link href="css/istri2.css" rel="stylesheet"-->
+    <script src="js/istri.js"></script>
+    <style>
+        body {
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar {
+            width: 100px;
+            margin: 70px auto;
+        }
+        button {
+            cursor: pointer;
+        }
+        ul {
+            background: plum;
+            border-radius: 4px;
+            padding: 0px;
+            width: 100px;
+            padding: 5px 10px;
+        }
+        ul li {
+            list-style: none;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        ul li:hover{
+            background: rgb(85, 51, 85);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>    
+            <div class="navbar">
+                <button onclick="menu.hidden ^=1">&#9776;</button>
+                <ul id="menu" hidden>
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="profile.html">profile</a></li>
+                    <li><a href="kontak.html">kontak</a></li>
+            </ul></div>
+    </header>
+    <br>
+</body>
+</html>
