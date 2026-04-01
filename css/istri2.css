@@ -125,12 +125,6 @@ hr {
 
 
 /*Mine*/
-.container2 {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-}
-
 .t2 {
    min-height: 100vh;
    display: flex;
@@ -186,3 +180,6 @@ hr {
     border-radius: 50px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 1);
 }
+
+
+    
