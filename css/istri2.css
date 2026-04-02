@@ -26,17 +26,17 @@ hr {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 10px 0;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    height: 60px;
 }
 
 .logo img {
-    margin: 0 20px;
-    width: 50px;
+    width: 45px;
     height: auto;
+    display: block;
 }
 
 .menu {
@@ -44,8 +44,6 @@ hr {
     margin: 0;
     padding: 0;
     display: flex;
-    margin-left: auto;
-    flex-wrap: wrap;
 }
 
 .menu li {
@@ -60,6 +58,39 @@ hr {
 
 .menu li a:hover {
     color: blue;
+}
+
+/* Tombol hamburger - disembunyikan di desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Animasi jadi X saat aktif */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
 }
 
 /* ========== CONTAINER ========== */
@@ -88,16 +119,8 @@ hr {
     border-radius: 40px;
 }
 
-.t1dan2 h1 {
-    margin-bottom: 20px;
-    font-size: 40px;
-}
-
-.t1dan2 p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: black;
-}
+.t1dan2 h1 { margin-bottom: 20px; font-size: 40px; }
+.t1dan2 p  { margin-bottom: 20px; font-size: 16px; color: black; }
 
 .t1dan2 button {
     padding: 12px 25px;
@@ -108,22 +131,12 @@ hr {
     cursor: pointer;
     border-radius: 8px;
 }
+.t1dan2 button:hover { background-color: black; color: white; }
 
-.t1dan2 button:hover {
-    background-color: black;
-    color: white;
-}
-
-.wife {
-    width: 40%;
-}
-
+.wife { width: 40%; }
 .wife img {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-    object-fit: cover;
-    border-radius: 50px;
+    width: 100%; height: auto; max-height: 80vh;
+    object-fit: cover; border-radius: 50px;
     box-shadow: 0 0 100px rgb(214, 46, 144);
 }
 
@@ -146,16 +159,8 @@ hr {
     border-radius: 40px;
 }
 
-.t2dan1 h1 {
-    margin-bottom: 20px;
-    font-size: 40px;
-}
-
-.t2dan1 p {
-    margin-bottom: 25px;
-    font-size: 16px;
-    color: black;
-}
+.t2dan1 h1 { margin-bottom: 20px; font-size: 40px; }
+.t2dan1 p  { margin-bottom: 25px; font-size: 16px; color: black; }
 
 .t2dan1 button {
     padding: 12px 25px;
@@ -166,23 +171,13 @@ hr {
     cursor: pointer;
     border-radius: 8px;
 }
+.t2dan1 button:hover { background-color: black; color: white; }
 
-.t2dan1 button:hover {
-    background-color: black;
-    color: white;
-}
-
-.mine {
-    width: 40%;
-}
-
+.mine { width: 40%; }
 .mine img {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-    object-fit: cover;
-    border-radius: 50px;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+    width: 100%; height: auto; max-height: 80vh;
+    object-fit: cover; border-radius: 50px;
+    box-shadow: 0 0 100px rgba(0,0,0,1);
 }
 
 /* ========== SECTION 3 - CV ========== */
@@ -204,32 +199,12 @@ hr {
     border-radius: 40px;
 }
 
-.t3dan1 h1 {
-    margin-bottom: 20px;
-    font-size: 40px;
-    text-align: center;
-}
+.t3dan1 h1 { margin-bottom: 20px; font-size: 40px; text-align: center; }
+.t3dan1 h3 { margin-bottom: 10px; }
+.t3dan1 ul { padding-left: 20px; margin-bottom: 10px; }
+.t3dan1 ul li { margin-bottom: 6px; }
+.t3dan1 p  { margin-bottom: 16px; font-size: 15px; color: black; }
 
-.t3dan1 h3 {
-    margin-bottom: 10px;
-}
-
-.t3dan1 ul {
-    padding-left: 20px;
-    margin-bottom: 10px;
-}
-
-.t3dan1 ul li {
-    margin-bottom: 6px;
-}
-
-.t3dan1 p {
-    margin-bottom: 16px;
-    font-size: 15px;
-    color: black;
-}
-
-/* Tombol CV pakai wrapper supaya tidak tumpuk */
 .cv-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -246,54 +221,59 @@ hr {
     cursor: pointer;
     border-radius: 8px;
 }
+.t3dan1 button:hover { background-color: black; color: white; }
 
-.t3dan1 button:hover {
-    background-color: black;
-    color: white;
-}
-
-.cv {
-    width: 40%;
-}
-
+.cv { width: 40%; }
 .cv img {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-    object-fit: cover;
-    object-position: top;
+    width: 100%; height: auto; max-height: 80vh;
+    object-fit: cover; object-position: top;
     border-radius: 50px;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 100px rgba(0,0,0,1);
 }
 
 /* ========================================
-   RESPONSIVE - TABLET & HP (max 768px)
+   RESPONSIVE - HP (max 768px)
    ======================================== */
 @media (max-width: 768px) {
 
-    /* Navbar */
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px 0;
-        gap: 4px;
+    /* Tampilkan tombol hamburger */
+    .hamburger {
+        display: flex;
     }
 
+    /* Sembunyikan menu, tampil saat .open */
     .menu {
-        margin-left: 0;
-        padding: 6px 20px 10px;
-        gap: 4px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: grey;
+        padding: 8px 0 16px;
+        z-index: 99;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .menu.open {
+        display: flex;
     }
 
     .menu li {
-        margin-right: 16px;
+        margin: 0;
+        padding: 12px 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
     }
 
     .menu li a {
-        font-size: 15px;
+        font-size: 16px;
     }
 
-    /* Semua section jadi column */
+    /* Sections jadi column */
     .t1, .t2, .t3 {
         flex-direction: column;
         min-height: auto;
@@ -301,53 +281,26 @@ hr {
         gap: 20px;
     }
 
-    /* Box teks full width */
     .t1dan2, .t2dan1, .t3dan1 {
         width: 100%;
         margin: 0;
     }
 
-    /* Gambar full width tapi dibatasi tingginya */
     .wife, .mine, .cv {
         width: 100%;
     }
 
-    .wife img {
-        max-height: 280px;
-        border-radius: 24px;
-        object-position: center;
-    }
+    .wife img  { max-height: 280px; border-radius: 24px; object-position: center; }
+    .mine img  { max-height: 280px; border-radius: 24px; }
+    .cv img    { max-height: 260px; border-radius: 24px; object-position: top; }
 
-    .mine img {
-        max-height: 280px;
-        border-radius: 24px;
-        object-position: center;
-    }
+    .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 { font-size: 26px; }
+    .t1dan2 p,  .t2dan1 p,  .t3dan1 p  { font-size: 14px; }
 
-    .cv img {
-        max-height: 260px;
-        border-radius: 24px;
-        object-position: top;
-    }
-
-    .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 {
-        font-size: 28px;
-    }
-
-    .t1dan2 p, .t2dan1 p, .t3dan1 p {
-        font-size: 14px;
-    }
-
-    /* Button section 1 & 2 full width */
     .t1dan2 button, .t2dan1 button {
         width: 100%;
         padding: 13px;
         font-size: 15px;
-    }
-
-    /* Tombol CV sejajar */
-    .cv-buttons {
-        flex-direction: row;
     }
 
     .t3dan1 button {
@@ -358,28 +311,8 @@ hr {
     }
 }
 
-/* ========================================
-   RESPONSIVE - HP KECIL (max 400px)
-   ======================================== */
 @media (max-width: 400px) {
-
-    .menu li a {
-        font-size: 13px;
-    }
-
-    .menu li {
-        margin-right: 12px;
-    }
-
-    .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 {
-        font-size: 22px;
-    }
-
-    .wife img, .mine img {
-        max-height: 220px;
-    }
-
-    .cv img {
-        max-height: 200px;
-    }
+    .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 { font-size: 22px; }
+    .wife img, .mine img { max-height: 220px; }
+    .cv img { max-height: 200px; }
 }
