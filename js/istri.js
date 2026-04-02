@@ -11,3 +11,20 @@ function goCv(n) {
     });
     document.getElementById('cv' + n).style.display = 'block';
 }
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('open');
+});
+
+// Tutup menu saat salah satu link diklik
+menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        menu.classList.remove('open');
+    });
+});
