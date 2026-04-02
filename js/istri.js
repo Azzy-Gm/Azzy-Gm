@@ -1,4 +1,3 @@
-// Sembunyikan semua cv-content saat halaman load
 window.onload = function() {
     document.querySelectorAll('.cv-content').forEach(function(c) {
         c.style.display = 'none';
