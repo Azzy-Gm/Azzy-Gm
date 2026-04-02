@@ -5,89 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Percobaan</title>
     <link href="css/istri2.css" rel="stylesheet">
-    <script src="js/istri.js"></script>
 </head>
 <body>
+
 <nav class="navbar">
     <div class="logo">
         <a href="#home"><img src="img/rm.png" alt="logo"></a>
     </div>
     <ul class="menu">
-        <li><a href="#home">home</a></li>
+        <li><a href='#home'>home</a></li>
         <li><a href="#about">about</a></li>
-        <li><a href="#profile">profile</a>
-        </li><li><a href="#kontak">kontak</a></li>
+        <li><a href="#profile">profile</a></li>
+        <li><a href="#kontak">kontak</a></li>
     </ul>
 </nav>
+
 <br>
-    
+
 <!-- My Wife -->
 <div class="container">
-        
-        <section class="t1" id="home">
-                <div class="t1dan2">
-                    <h1>My Wife</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nostrum quaerat mollitia cumque odio. Nobis quo doloremque, ipsa laboriosam eius culpa unde delectus? Iusto, dolore autem. Eius illo earum veniam.
-                    </p><button>Pencet</button></div>
-                <div class="wife">
-                    <img src="img/Kaguya_Shinomiya_Anime.jpg" alt="ISTRI">
-                </div>
-        </section>
-    </div>
+    <section class="t1" id="home">
+        <div class="t1dan2">
+            <h1>My Wife</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nostrum quaerat mollitia cumque odio. Nobis quo doloremque, ipsa laboriosam eius culpa unde delectus? Iusto, dolore autem. Eius illo earum veniam.</p>
+            <button>Pencet</button>
+        </div>
+        <div class="wife">
+            <img src="img/Kaguya_Shinomiya_Anime.jpg" alt="ISTRI">
+        </div>
+    </section>
+</div>
+
 <br>
 <hr>
 
 <!-- Mine -->
- <div class="container">
+<div class="container">
     <section class="t2" id="about">
         <div class="mine">
             <img src="img/Dance.gif" alt="SUAMI">
         </div>
-        
         <div class="t2dan1">
             <h1>Mine</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur reiciendis sunt vitae cumque veniam doloribus, aperiam doloremque praesentium fugit, sit eaque facere eum suscipit, aspernatur dolorem laboriosam. Quisquam, reprehenderit quia.</p>
-            <button>Pencet</button>
+            <button onclick="">Pencet</button>
         </div>
     </section>
- </div>
+</div>
+
 <hr>
-    
- <!--Latihan buat CV-->
- <div class="container">
-     <section class ="t3" id="profile">
-         <div class="cv">
-             <img src="img/Pas_foto.jpg" alt="MYSELF">
-         </div>
 
-         <div class="t3dan1">
-             <b><u><h1>My CV</h1></u></b>
-             <h3><b><u><p>Identitas</h3></u></b>
-             <div class="ID">
+<!-- Latihan buat CV -->
+<div class="container">
+    <section class="t3" id="profile">
+        <div class="cv">
+            <img src="img/Pas_foto.jpg" alt="MYSELF">
+        </div>
+        <div class="t3dan1">
+
+            <!-- Konten 1: Identitas -->
+            <div class="cv-content" id="cv1">
+                <b><u><h1>My CV</h1></u></b>
+                <h3><b><u>Identitas</u></b></h3>
                 <ul>
-                    <li>Nama:</li>
-                    <li>Alamat:</li>
-                    <li>Tanggal Lahir:</li>
-                    <li>No.Tlp/Email:</li>
-                    <li>Pendidikan Terakhir:</li>
+                    <li>Nama                :</li>
+                    <li>Alamat              :</li>
+                    <li>Tanggal Lahir       :</li>
+                    <li>No.Tlp/Email        :</li>
+                    <li>Pendidikan Terakhir :</li>
                 </ul>
-             </div></p><hr>
-
-             <h3><b><u><p>Pengalaman Kerja</h3></u></b>
-             <div>
+                <br><hr>
+                <h3><b><u>Pengalaman Kerja</u></b></h3>
                 <ul>
                     <li>Crew - PT (2000)</li>
                     <li>Crew - Popeyes (2000)</li>
                 </ul>
-             </div></p>
+                <br>
+                <p>🔻 Tekan Tombol untuk melihat lainnya 🔻</p>
+                <button onclick="goCv(2)">Tekan Disini 💋</button>
+            </div>
 
-             <p>🔻 Tekan Tombol untuk melihat lainnya 🔻.</p>
-             <button>Tekan Disini 💋</button>
-         </div>
-     </section>
- </div>
-    
-    
- </div>
+            <!-- Konten 2: Pendidikan & Skills -->
+            <div class="cv-content" id="cv2">
+                <b><u><h1>My CV</h1></u></b>
+                <h3><b><u>Pendidikan</u></b></h3>
+                <ul>
+                    <li>SD__________</li>
+                    <li>SMP__________</li>
+                    <li>SMA__________</li>
+                </ul>
+                <br><hr>
+                <h3><b><u>Keahlian</u></b></h3>
+                <ul>
+                    <li>Menghujat</li>
+                    <li>Menimpa</li>
+                    <li>Menggokil</li>
+                </ul>
+                <br>
+                <button onclick="goCv(1)">😒 Kembali</button>
+                <button onclick="goCv(3)">Lanjut 💋</button>
+            </div>
+
+            <!-- Konten 3: Tentang -->
+            <div class="cv-content" id="cv3">
+                <b><u><h1>My CV</h1></u></b>
+                <h3><b><u>Tentang Saya</u></b></h3>
+                <p>Saya adalah Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque enim laboriosam eos esse, similique numquam deserunt harum. Optio amet impedit mollitia! Magnam nesciunt quis minus, eligendi ab delectus fuga placeat?</p>
+                <hr>
+                <h3><b><u>Hobi</u></b></h3>
+                <ul>
+                    <li>Rasing</li>
+                    <li>Rasing</li>
+                    <li>Rasing</li>
+                </ul>
+                <br>
+                <button onclick="goCv(2)">😒 Kembali</button>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<script src="js/istri.js"></script>
 </body>
 </html>
