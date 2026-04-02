@@ -7,7 +7,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 30px;
+    scroll-padding-top: 70px;
 }
 
 body {
@@ -15,7 +15,9 @@ body {
 }
 
 hr {
-    size: 6;
+    border: none;
+    border-top: 2px solid #bbb;
+    margin: 16px 0;
 }
 
 /* ========== NAVBAR ========== */
@@ -79,9 +81,7 @@ hr {
 
 .t1dan2 {
     width: 50%;
-    height: auto;
     background: wheat;
-    justify-content: center;
     text-align: justify;
     padding: 20px;
     margin: auto;
@@ -106,10 +106,12 @@ hr {
     color: green;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .t1dan2 button:hover {
     background-color: black;
+    color: white;
 }
 
 .wife {
@@ -137,9 +139,7 @@ hr {
 
 .t2dan1 {
     width: 50%;
-    height: auto;
     background: wheat;
-    justify-content: center;
     text-align: justify;
     padding: 20px;
     margin: auto;
@@ -164,10 +164,12 @@ hr {
     color: green;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .t2dan1 button:hover {
     background-color: black;
+    color: white;
 }
 
 .mine {
@@ -195,9 +197,7 @@ hr {
 
 .t3dan1 {
     width: 50%;
-    height: auto;
     background: wheat;
-    justify-content: center;
     text-align: justify;
     padding: 20px;
     margin: auto;
@@ -210,24 +210,46 @@ hr {
     text-align: center;
 }
 
+.t3dan1 h3 {
+    margin-bottom: 10px;
+}
+
+.t3dan1 ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.t3dan1 ul li {
+    margin-bottom: 6px;
+}
+
 .t3dan1 p {
-    margin-bottom: 25px;
-    font-size: 16px;
+    margin-bottom: 16px;
+    font-size: 15px;
     color: black;
 }
 
+/* Tombol CV pakai wrapper supaya tidak tumpuk */
+.cv-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
 .t3dan1 button {
-    padding: 12px 25px;
+    padding: 12px 20px;
     border: none;
     background-color: lightcoral;
     color: green;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
-    margin-right: 8px;
+    border-radius: 8px;
 }
 
 .t3dan1 button:hover {
     background-color: black;
+    color: white;
 }
 
 .cv {
@@ -239,21 +261,13 @@ hr {
     height: auto;
     max-height: 80vh;
     object-fit: cover;
+    object-position: top;
     border-radius: 50px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 1);
 }
 
-/* CV content toggle (hidden by default) */
-.cv-content {
-    display: none;
-}
-
-.cv-content.active {
-    display: block;
-}
-
 /* ========================================
-   RESPONSIVE - TABLET (max 768px)
+   RESPONSIVE - TABLET & HP (max 768px)
    ======================================== */
 @media (max-width: 768px) {
 
@@ -261,94 +275,111 @@ hr {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px 0;
-        gap: 8px;
+        padding: 8px 0;
+        gap: 4px;
     }
 
     .menu {
         margin-left: 0;
-        padding: 0 20px 10px;
-        gap: 8px;
+        padding: 6px 20px 10px;
+        gap: 4px;
     }
 
     .menu li {
-        margin-right: 15px;
+        margin-right: 16px;
     }
 
-    /* Semua section jadi column (stack atas-bawah) */
+    .menu li a {
+        font-size: 15px;
+    }
+
+    /* Semua section jadi column */
     .t1, .t2, .t3 {
         flex-direction: column;
         min-height: auto;
-        padding: 30px 0;
+        padding: 30px 0 40px;
         gap: 20px;
     }
 
-    /* Section 2: gambar di atas, teks di bawah */
-    .t2 {
-        flex-direction: column;
-    }
-
-    /* Section 3: gambar di atas, cv box di bawah */
-    .t3 {
-        flex-direction: column;
-    }
-
-    /* Box teks semua jadi full width */
+    /* Box teks full width */
     .t1dan2, .t2dan1, .t3dan1 {
         width: 100%;
         margin: 0;
     }
 
-    /* Gambar semua jadi full width */
+    /* Gambar full width tapi dibatasi tingginya */
     .wife, .mine, .cv {
         width: 100%;
     }
 
-    /* Gambar tidak terlalu tinggi di HP */
-    .wife img, .mine img, .cv img {
-        max-height: 40vh;
-        border-radius: 30px;
-        object-position: top; /* foto orang, tampilkan bagian atas/wajah */
+    .wife img {
+        max-height: 280px;
+        border-radius: 24px;
+        object-position: center;
+    }
+
+    .mine img {
+        max-height: 280px;
+        border-radius: 24px;
+        object-position: center;
+    }
+
+    .cv img {
+        max-height: 260px;
+        border-radius: 24px;
+        object-position: top;
     }
 
     .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 {
         font-size: 28px;
-    }
-}
-
-/* ========================================
-   RESPONSIVE - MOBILE KECIL (max 480px)
-   ======================================== */
-@media (max-width: 480px) {
-
-    .menu li a {
-        font-size: 14px;
-    }
-
-    .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 {
-        font-size: 22px;
     }
 
     .t1dan2 p, .t2dan1 p, .t3dan1 p {
         font-size: 14px;
     }
 
-    /* Button full width supaya gampang ditekan */
+    /* Button section 1 & 2 full width */
     .t1dan2 button, .t2dan1 button {
         width: 100%;
-        padding: 12px;
+        padding: 13px;
         font-size: 15px;
-        margin-right: 0;
     }
 
-    /* Button CV tidak full width karena ada 2 button sejajar */
+    /* Tombol CV sejajar */
+    .cv-buttons {
+        flex-direction: row;
+    }
+
     .t3dan1 button {
-        padding: 10px 16px;
+        flex: 1;
+        padding: 13px 10px;
         font-size: 14px;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - HP KECIL (max 400px)
+   ======================================== */
+@media (max-width: 400px) {
+
+    .menu li a {
+        font-size: 13px;
     }
 
-    .wife img, .mine img, .cv img {
-        max-height: 35vh;
-        border-radius: 20px;
+    .menu li {
+        margin-right: 12px;
+    }
+
+    .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 {
+        font-size: 22px;
+    }
+
+    .wife img, .mine img {
+        max-height: 220px;
+    }
+
+    .cv img {
+        max-height: 200px;
     }
 }
