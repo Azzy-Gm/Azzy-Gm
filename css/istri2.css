@@ -208,8 +208,6 @@ hr {
     margin-bottom: 20px;
     font-size: 40px;
     text-align: center;
-    align-items: center;
-    align-content: center;
 }
 
 .t3dan1 p {
@@ -225,6 +223,7 @@ hr {
     color: green;
     font-size: 16px;
     cursor: pointer;
+    margin-right: 8px;
 }
 
 .t3dan1 button:hover {
@@ -244,10 +243,20 @@ hr {
     box-shadow: 0 0 100px rgba(0, 0, 0, 1);
 }
 
+/* CV content toggle (hidden by default) */
+.cv-content {
+    display: none;
+}
+
+.cv-content.active {
+    display: block;
+}
+
 /* ========================================
    RESPONSIVE - TABLET (max 768px)
    ======================================== */
 @media (max-width: 768px) {
+
     /* Navbar */
     .navbar {
         flex-direction: column;
@@ -266,35 +275,44 @@ hr {
         margin-right: 15px;
     }
 
-    /* Sections */
+    /* Semua section jadi column (stack atas-bawah) */
     .t1, .t2, .t3 {
         flex-direction: column;
         min-height: auto;
-        padding: 40px 0;
-        gap: 30px;
+        padding: 30px 0;
+        gap: 20px;
     }
 
-    /* Balik urutan gambar di section 2 supaya gambar tetap di atas teks */
+    /* Section 2: gambar di atas, teks di bawah */
     .t2 {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
+    /* Section 3: gambar di atas, cv box di bawah */
+    .t3 {
+        flex-direction: column;
+    }
+
+    /* Box teks semua jadi full width */
     .t1dan2, .t2dan1, .t3dan1 {
         width: 100%;
         margin: 0;
     }
 
-    .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 {
-        font-size: 30px;
-    }
-
+    /* Gambar semua jadi full width */
     .wife, .mine, .cv {
         width: 100%;
     }
 
+    /* Gambar tidak terlalu tinggi di HP */
     .wife img, .mine img, .cv img {
-        max-height: 50vh;
+        max-height: 40vh;
         border-radius: 30px;
+        object-position: top; /* foto orang, tampilkan bagian atas/wajah */
+    }
+
+    .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 {
+        font-size: 28px;
     }
 }
 
@@ -302,26 +320,35 @@ hr {
    RESPONSIVE - MOBILE KECIL (max 480px)
    ======================================== */
 @media (max-width: 480px) {
+
     .menu li a {
         font-size: 14px;
     }
 
     .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .t1dan2 p, .t2dan1 p, .t3dan1 p {
         font-size: 14px;
     }
 
-    .t1dan2 button, .t2dan1 button, .t3dan1 button {
+    /* Button full width supaya gampang ditekan */
+    .t1dan2 button, .t2dan1 button {
         width: 100%;
         padding: 12px;
         font-size: 15px;
+        margin-right: 0;
+    }
+
+    /* Button CV tidak full width karena ada 2 button sejajar */
+    .t3dan1 button {
+        padding: 10px 16px;
+        font-size: 14px;
     }
 
     .wife img, .mine img, .cv img {
+        max-height: 35vh;
         border-radius: 20px;
-        max-height: 40vh;
     }
 }
