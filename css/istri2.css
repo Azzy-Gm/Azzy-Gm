@@ -1,8 +1,8 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 html {
@@ -18,15 +18,23 @@ hr {
     size: 6;
 }
 
+/* ========== NAVBAR ========== */
 .navbar {
     background-color: grey;
     position: sticky;
     top: 0;
-    z-index: 1;
-    padding: 0 0;
+    z-index: 100;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    margin: 0 20px;
+    width: 50px;
+    height: auto;
 }
 
 .menu {
@@ -35,43 +43,38 @@ hr {
     padding: 0;
     display: flex;
     margin-left: auto;
+    flex-wrap: wrap;
 }
 
 .menu li {
     margin-right: 20px;
 }
 
-.menu li a{
+.menu li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-.menu li a:hover{
+.menu li a:hover {
     color: blue;
 }
 
-.logo img {
-   margin: 0 20px;
-   width: 50px;
-   height: auto;
-}
-
-
-
-
-/*Wife*/
+/* ========== CONTAINER ========== */
 .container {
     width: 90%;
     max-width: 1000px;
     margin: auto;
 }
 
+/* ========== SECTION 1 - WIFE ========== */
 .t1 {
-   min-height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 0;
 }
 
 .t1dan2 {
@@ -88,7 +91,7 @@ hr {
 .t1dan2 h1 {
     margin-bottom: 20px;
     font-size: 40px;
-} 
+}
 
 .t1dan2 p {
     margin-bottom: 20px;
@@ -105,7 +108,7 @@ hr {
     cursor: pointer;
 }
 
-.t1dan2 button:hover{
+.t1dan2 button:hover {
     background-color: black;
 }
 
@@ -120,17 +123,16 @@ hr {
     object-fit: cover;
     border-radius: 50px;
     box-shadow: 0 0 100px rgb(214, 46, 144);
-
-
 }
 
-
-/*Mine*/
+/* ========== SECTION 2 - MINE ========== */
 .t2 {
-   min-height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 0;
 }
 
 .t2dan1 {
@@ -142,13 +144,12 @@ hr {
     padding: 20px;
     margin: auto;
     border-radius: 40px;
-
 }
 
 .t2dan1 h1 {
     margin-bottom: 20px;
     font-size: 40px;
-} 
+}
 
 .t2dan1 p {
     margin-bottom: 25px;
@@ -165,7 +166,7 @@ hr {
     cursor: pointer;
 }
 
-.t2dan1 button:hover{
+.t2dan1 button:hover {
     background-color: black;
 }
 
@@ -182,12 +183,14 @@ hr {
     box-shadow: 0 0 100px rgba(0, 0, 0, 1);
 }
 
-/*CV*/
+/* ========== SECTION 3 - CV ========== */
 .t3 {
-   min-height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 0;
 }
 
 .t3dan1 {
@@ -199,7 +202,6 @@ hr {
     padding: 20px;
     margin: auto;
     border-radius: 40px;
-
 }
 
 .t3dan1 h1 {
@@ -208,7 +210,7 @@ hr {
     text-align: center;
     align-items: center;
     align-content: center;
-} 
+}
 
 .t3dan1 p {
     margin-bottom: 25px;
@@ -240,4 +242,86 @@ hr {
     object-fit: cover;
     border-radius: 50px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 1);
-}    
+}
+
+/* ========================================
+   RESPONSIVE - TABLET (max 768px)
+   ======================================== */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+        gap: 8px;
+    }
+
+    .menu {
+        margin-left: 0;
+        padding: 0 20px 10px;
+        gap: 8px;
+    }
+
+    .menu li {
+        margin-right: 15px;
+    }
+
+    /* Sections */
+    .t1, .t2, .t3 {
+        flex-direction: column;
+        min-height: auto;
+        padding: 40px 0;
+        gap: 30px;
+    }
+
+    /* Balik urutan gambar di section 2 supaya gambar tetap di atas teks */
+    .t2 {
+        flex-direction: column-reverse;
+    }
+
+    .t1dan2, .t2dan1, .t3dan1 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 {
+        font-size: 30px;
+    }
+
+    .wife, .mine, .cv {
+        width: 100%;
+    }
+
+    .wife img, .mine img, .cv img {
+        max-height: 50vh;
+        border-radius: 30px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE KECIL (max 480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .menu li a {
+        font-size: 14px;
+    }
+
+    .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 {
+        font-size: 24px;
+    }
+
+    .t1dan2 p, .t2dan1 p, .t3dan1 p {
+        font-size: 14px;
+    }
+
+    .t1dan2 button, .t2dan1 button, .t3dan1 button {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .wife img, .mine img, .cv img {
+        border-radius: 20px;
+        max-height: 40vh;
+    }
+}
