@@ -20,7 +20,7 @@ hr {
     margin: 16px 0;
 }
 
-/* ========== NAVBAR ========== */
+/* NAVBAR  */
 .navbar {
     background-color: grey;
     position: sticky;
@@ -82,7 +82,7 @@ hr {
     transition: all 0.3s ease;
 }
 
-/* Animasi jadi X saat aktif */
+/* Animasi jadi X pas aktif */
 .hamburger.active span:nth-child(1) {
     transform: translateY(8.5px) rotate(45deg);
 }
@@ -93,7 +93,7 @@ hr {
     transform: translateY(-8.5px) rotate(-45deg);
 }
 
-/* ========== CONTAINER ========== */
+/* CONTAINERNYA */
 .container {
     width: 90%;
     max-width: 1000px;
@@ -101,7 +101,7 @@ hr {
     top: 0;
 }
 
-/* ========== SECTION 1 - WIFE ========== */
+/* SECTION 1 - WIFE */
 .t1 {
     min-height: 100vh;
     display: flex;
@@ -141,7 +141,7 @@ hr {
     box-shadow: 0 0 100px rgb(214, 46, 144);
 }
 
-/* ========== SECTION 2 - MINE ========== */
+/* SECTION 2 - MINE */
 .t2 {
     min-height: 100vh;
     display: flex;
@@ -181,7 +181,7 @@ hr {
     box-shadow: 0 0 100px rgba(0,0,0,1);
 }
 
-/* ========== SECTION 3 - CV ========== */
+/* SECTION 3 - CV */
 .t3 {
     min-height: 100vh;
     display: flex;
@@ -279,7 +279,7 @@ hr {
         flex-direction: column;
         min-height: auto;
         padding: 30px 0 40px;
-        gap: 20px;
+        gap: 30px;
     }
 
     .t1dan2, .t2dan1, .t3dan1 {
@@ -291,7 +291,7 @@ hr {
         width: 100%;
     }
 
-    .wife img  { max-height: 280px; border-radius: 24px; object-position: center; }
+    .wife img  { max-height: 280px; border-radius: 24px; object-position: top; }
     .mine img  { max-height: 280px; border-radius: 24px; }
     .cv img    { max-height: 260px; border-radius: 24px; object-position: top; }
 
@@ -314,6 +314,6 @@ hr {
 
 @media (max-width: 400px) {
     .t1dan2 h1, .t2dan1 h1, .t3dan1 h1 { font-size: 22px; }
-    .wife img, .mine img { max-height: 220px; }
+    .wife img, .mine img { max-height: 1000px; }
     .cv img { max-height: 200px; }
 }
