@@ -29,6 +29,6 @@ menu.querySelectorAll('a').forEach(function(link) {
     });
 });
 
-function pencet(){
+function Pencet(){
     alert('Prabowo berbiji 1')
 }
