@@ -30,5 +30,5 @@ menu.querySelectorAll('a').forEach(function(link) {
 });
 
 function Pencet(){
-    alert('Prabowo berbiji 1')
+    alert('WOWO IS MY .............')
 }
