@@ -1,0 +1,246 @@
+/* Universal */
+html {
+    background-image: url('../img/back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(46, 45, 45, 0.5);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Landing */
+#landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.landing-card {
+    background-color: #444;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.landing-card h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    color: blue;
+    text-shadow: 2px 5px 10px rgb(23, 45, 188);
+}
+
+.landing-card p {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #aaa;
+    text-shadow: 1px 3px 10px rgb(0, 0, 0);
+}
+
+.landing-idnty {
+    margin: 0;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.landing-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Isi Content */
+.content-article {
+    max-width: 90vh;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: #3a3a3a;
+    border: 1px solid #666;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#kedua.content-article {
+    margin: 10vh auto;
+}
+
+/* Buton */
+.btn-scroll-up,
+.btn-scroll-down {
+    position: fixed;
+    height: 25px;
+    width: 25px;
+    bottom: 25px;
+    border-radius: 50%;
+    background-color: green;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9em;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.btn-scroll-up {
+    left: 90%;
+}
+
+.btn-scroll-down {
+    left: 82%;
+}
+
+/* Article Header */
+.article-header {
+    border-bottom: 1px solid #666;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.article-label {
+    margin: 0 0 6px 0;
+    font-size: 0.9em;
+    color: #aaa;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.article-title {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+/* Img */
+.article-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.article-image-jkt {
+    width: 80%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin: auto;
+    display: block;
+}
+.article-body {
+    letter-spacing: 0.5px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.article-body p {
+    margin-bottom: 20px;
+}
+
+.article-body p:first-child {
+    text-indent: 50px;
+}
+
+.article-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer */
+.article-footer {
+    border-top: 1px solid #666;
+    margin-top: 24px;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.article-footer-bottom {
+    border-top: 1px solid #666;
+    margin-top: 24px;
+    padding-top: 16px;
+    text-align: center;
+}
+
+.back-link {
+    color: blue;
+    font-size: 0.9em;
+}
+
+.logout-wrapper {
+    margin-top: 12px;
+    font-size: 0.9em;
+    color: white;
+}
+
+/* Button */
+.btn-next {
+    background-color: green;
+    font-size: 0.9em;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.btn-logout {
+    background-color: red;
+    font-size: 0.9em;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: ;
+}
+.btn-logout:hover, .btn-logout:visited {
+    border-top: ; 
+    border-left: ;
+
+}
+
+blockquote{
+    margin:20px 0;
+    padding:15px;
+    background: lightgray;
+    border-left:5px solid #668;
+}
+
+blockquote .quote{
+    color: rgb(205, 25, 25);
+    font-family:Georgia, serif;
+    font-style:italic;
+    letter-spacing: 1.2px;
+    text-align: justify;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+blockquote .wm{
+    color: rgb(69, 69, 200);
+    margin-top:10px;
+    letter-spacing: 1.2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* page2.html */
+.profile-image{ 
+    width: 50%;
+    display: block;
+    border-radius: 50%;
+    border-bottom: #fff solid;
+    margin: auto;
+}
